@@ -1,0 +1,58 @@
+<!-- wp:html -->
+<div class="col-lg-12 col-md-12 col-sm-12" style="text-align:left;padding-left:0;margin-bottom:10px;">
+    <h4 class="blu-italia-base-color" style="font-size:24px;margin:0;">La situazione in Italia: 7 giugno 2020, ore 18.00</h4>
+    </div>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left:0;">
+    <div style="margin-bottom:10px;background-color:#29292a;text-align:center;"><span style="font-weight:bold;font-size:18px;"><font color="white">GUARITI</font></span></div>
+    <div id="pos" style="clear:both;font-weight:bold;text-align:center;font-size:40px;"></div>
+    </div>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left:0;">
+    <div style="margin-bottom:10px;background-color:#29292a;text-align:center;"><span style="font-weight:bold;font-size:18px;"><font color="white">DECEDUTI</font></span></div>
+    <div id="dead" style="clear:both;font-weight:bold;text-align:center;font-size:40px;"></div>
+    </div>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left:0;">
+    <div style="margin-bottom:10px;background-color:#29292a;text-align:center;"><span style="font-weight:bold;font-size:18px;"><font color="#fffff">CASI TOTALI</font></span></div>
+    <div id="total" style="clear:both;font-weight:bold;text-align:center;font-size:40px;"></div>
+    </div>
+    <!-- /wp:html -->
+    
+    <!-- wp:separator -->
+    <hr class="wp-block-separator"/>
+    <!-- /wp:separator -->
+    
+    <!-- wp:html -->
+    <ul>
+    <li>mappa situazione in <a href="http://opendatadpc.maps.arcgis.com/apps/opsdashboard/index.html#/b0c68bce2cce478eaac82fe38d4138b1">italia</a></li>
+    </ul>
+    <!-- /wp:html -->
+    
+    <!-- wp:html -->
+    <article align="left"><p>fonti:<a href="http://www.salute.gov.it/portale/nuovocoronavirus/dettaglioContenutiNuovoCoronavirus.jsp?lingua=italiano&amp;id=5351&amp;area=nuovoCoronavirus&amp;menu=vuoto"> ministero della salute</a></p></article>
+    <!-- /wp:html -->
+    
+    <p><script type="text/javascript">fetch('https://liceocremonablogcovidapi.herokuapp.com/api').then(function (response) {if (response.status !== 200) {console.log(`Looks like there was a problem.`);return;} response.json().then(function (data) {console.log(data);document.getElementById("pos").innerHTML += data.recovered;document.getElementById("dead").innerHTML += data.deaths;document.getElementById("total").innerHTML += data.confirmed;});}).catch(function (error) {console.log("Fetch error: ");});</script></p>
+    
+    <!-- wp:nextpage -->
+    <!--nextpage-->
+    <!-- /wp:nextpage -->
+    
+    <!-- wp:table {"className":"is-style-regular"} -->
+    <figure class="wp-block-table is-style-regular"><table><tbody><tr><td><a href="https://1bcremonablog.wordpress.com/2020/03/12/11-03-2020/">11.03.20</a><br>Vengono chiuse tutte le attività e i luoghi aperti che coinvolgono la maggioranza delle persone...</td></tr></tbody></table></figure>
+    <!-- /wp:table -->
+    
+    <!-- wp:table {"className":"is-style-regular"} -->
+    <figure class="wp-block-table is-style-regular"><table><tbody><tr><td><a href="https://1bcremonablog.wordpress.com/2020/03/12/10-03-20/">10.03.20</a><br>Oggi, 3 Marzo 2020, il un nuovo Consiglio dei ministri affronterà l’emergenza Covid-19...</td></tr></tbody></table></figure>
+    <!-- /wp:table -->
+    
+    <!-- wp:paragraph -->
+    <p></p>
+    <!-- /wp:paragraph -->
