@@ -13,21 +13,21 @@ import requests
 }
 '''
 
-allow_cors = [
+allow_cors = [#cors site
     "https://www.liceocremonablog.it",
     "http://www.liceocremonablog.it"
 ]
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api": {"origins": allow_cors},r"/v2/api": {"origins": allow_cors},r"/v2/api/complete": {"origins": allow_cors},r"/v1/api": {"origins": allow_cors} })
-@app.route('/')
+@app.route('/')#app index
 def index():
     return '<h1>index<h1><br><p>link to <a href="/v2/api">api</a></p>'
 
-@app.route('/v1/api')
+@app.route('/v1/api')#old api url
 def api_old():
     return jsonify({"body": "questa versione non è più disponibile"})
 
-@app.route('/v2/api')
+@app.route('/v2/api')#new api url based on offical datas
 @app.route('/api')
 def api():
     raw_json = requests.get("https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json").json()
@@ -41,7 +41,7 @@ def api():
     }
     return jsonify(api_dict)
     
-@app.route('/v2/api/complete')
+@app.route('/v2/api/complete')#complete officail datas
 def api_or():
     raw_json = requests.get("https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json").json()
     today_data = raw_json[(len(raw_json)-1)]
