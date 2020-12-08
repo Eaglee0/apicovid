@@ -30,8 +30,8 @@ def api_old():
 @app.route('/v2/api')#new api url based on offical datas
 @app.route('/api')
 def api():
-    raw_json = requests.get("https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json").json()
-    today_data = raw_json[(len(raw_json)-1)]
+    raw_json = requests.get("https://github.com/pcm-dpc/COVID-19/blob/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json").json()
+    today_data = raw_json[0]
     api_dict = {
         "confirmed": today_data["totale_casi"],
         "deaths": today_data["deceduti"],
